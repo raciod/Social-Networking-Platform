@@ -1,3 +1,134 @@
-body{
-    background-color: aqua;
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-body: #333; /* Dark gray for body text */
+    --color-heading: #555; /* Dark gray for headings */
+    --color-base: #fff; /* White for main background */
+    --color-brand: #ff6f61; /* Coral color for brand color */
+    --color-brand2: #ffcc5c; /* Light orange for secondary brand color */
+    --font-base: "Bai Jamjuree", sans-serif;
+}
+
+body {
+    background-color: var(--color-base);
+    color: var(--color-body);
+    font-family: var(--font-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-brand);
+}
+
+img {
+    max-width: 100%;
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.navbar {
+    background-color: var(--color-brand);
+}
+
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-base);
+}
+
+.navbar .nav-link.active {
+    color: var(--color-base);
+}
+
+.btn {
+    padding: 10px 20px;
+    font-weight: 700;
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+    background-color: var(--color-brand2);
+    border-color: var(--color-brand2);
+}
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+/* Center the comment input */
+.input-group {
+    justify-content: center;
+}
+
+/* Style the comment input */
+.input-group input[type="text"] {
+    font-size: 14px; /* Adjust the font size as needed */
+    padding: 8px; /* Adjust the padding as needed */
+}
+
+/* Adjust size of delete post icons */
+.dropdown-toggle {
+    font-size: 16px;
+}
+
+/* Additional customizations */
+.card {
+    background-color: #f8f9fa; /* Light gray for card background */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Add some border radius */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.card-header {
+    background-color: var(--color-brand); /* Use brand color for card header */
+    color: var(--color-base); /* White text color */
+    font-weight: bold; /* Bold font for card header */
+    border-bottom: none; /* Remove bottom border */
+    border-top-left-radius: 10px; /* Adjust border radius */
+    border-top-right-radius: 10px; /* Adjust border radius */
+}
+
+.card-body {
+    padding: 20px; /* Increase padding for card body */
+}
+
+.card-footer {
+    background-color: #f8f9fa; /* Light gray for card footer */
+    border-top: none; /* Remove top border */
+    border-bottom-left-radius: 10px; /* Adjust border radius */
+    border-bottom-right-radius: 10px; /* Adjust border radius */
 }
